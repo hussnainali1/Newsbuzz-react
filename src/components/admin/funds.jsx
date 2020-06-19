@@ -4,7 +4,7 @@
 // import ApprovalCard from '../approvalCard';
 // import axios from 'axios';
 
-// const apiEndpoint = 'http://localhost:5000/api/funds';
+// const apiEndpoint = 'http://newsbuzz-react-server.herokuapp.com/api/funds';
 
 // class Funds extends Component {
 // 	state = {
