@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-const apiEndpoint = 'http://newsbuzz-react-server.herokuapp.com/api/ads/';
+const apiEndpoint = 'http://localhost:5000/api/ads/';
 
 class AdDetail extends Component {
 	state = {

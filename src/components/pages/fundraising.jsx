@@ -9,7 +9,7 @@ import medicalFunds from '../../assets/icons/medical-funds.svg';
 import memorialFunds from '../../assets/icons/memorial-funds.svg';
 import personalFunds from '../../assets/icons/personal-funds.svg';
 
-const apiEndpoint = 'http://newsbuzz-react-server.herokuapp.com/api/funds/isApproved/';
+const apiEndpoint = 'http://localhost:5000/api/funds/isApproved/';
 
 class Fundraising extends Component {
 	state = {

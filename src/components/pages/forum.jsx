@@ -10,7 +10,7 @@ import Form from '../common/form';
 import Issue from './../issue';
 import Pagination from '../common/pagination';
 import ListGroup from '../common/listGroups';
-const apiEndpoint = 'http://newsbuzz-react-server.herokuapp.com/api/issues';
+const apiEndpoint = 'http://localhost:5000/api/issues';
 
 class Forum extends Form {
 	state = {
@@ -51,7 +51,7 @@ class Forum extends Form {
 		let user = auth.getCurrentUser();
 		if (user) {
 			const { data } = await axios.get(
-				'http://newsbuzz-react-server.herokuapp.com/api/users/' + user._id
+				'http://localhost:5000/api/users/' + user._id
 			);
 			user = data[0];
 			this.setState({ user });
