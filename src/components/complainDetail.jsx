@@ -4,7 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
 import { Link } from "react-router-dom";
 const apiEndpoint =
-  "http://newsbuzz-server.herokuapp.com/api/display/registerEvent/updateStatus";
+  "https://newsbuzz-server.herokuapp.com/api/display/registerEvent/updateStatus";
 
 class ComplainDetail extends Component {
   state = {
@@ -17,7 +17,7 @@ class ComplainDetail extends Component {
     console.log(this.props.match.params.id);
     try {
       const { data } = await axios.get(
-        "http://newsbuzz-server.herokuapp.com/api/display/registerEvent/detail/",
+        "https://newsbuzz-server.herokuapp.com/api/display/registerEvent/detail/",
         {
           params: {
             Search_id: this.props.match.params.id,
@@ -68,7 +68,7 @@ class ComplainDetail extends Component {
         });
 
       const { data } = await axios.get(
-        "http://newsbuzz-server.herokuapp.com/api/display/registerEvent/detail/",
+        "https://newsbuzz-server.herokuapp.com/api/display/registerEvent/detail/",
         {
           params: {
             Search_id: this.props.match.params.id,
@@ -90,7 +90,7 @@ class ComplainDetail extends Component {
         });
 
       const { data } = await axios.get(
-        "http://newsbuzz-server.herokuapp.com/api/display/registerEvent/detail/",
+        "https://newsbuzz-server.herokuapp.com/api/display/registerEvent/detail/",
         {
           params: {
             Search_id: this.props.match.params.id,

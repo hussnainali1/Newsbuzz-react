@@ -7,7 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 import Pagination from "./common/pagination";
 import ListGroup from "./common/listGroup";
 const apiEndpoint =
-  "http://newsbuzz-server.herokuapp.com/api/display/react/registerEvent";
+  "https://newsbuzz-server.herokuapp.com/api/display/react/registerEvent";
 
 class Complains extends Component {
   state = {
@@ -59,8 +59,8 @@ class Complains extends Component {
     const filtered =
       this.state.selectedStatus && this.state.selectedStatus._id
         ? allComplains.filter(
-            (i) => i.status === this.state.selectedStatus.name
-          )
+          (i) => i.status === this.state.selectedStatus.name
+        )
         : allComplains;
 
     const complains = paginate(filtered, currentPage, pageSize);
