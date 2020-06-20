@@ -5,7 +5,7 @@
 // import Form from "../common/form";
 // import Popup from "reactjs-popup";
 // import axios from "axios";
-// const apiEndpoint = "http://localhost:5000/api/complains";
+// const apiEndpoint = "http://newsbuzz-react-server.herokuapp.com/api/complains";
 
 // class Complaint extends Form {
 //   state = {
