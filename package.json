@@ -54,5 +54,5 @@
 			"last 1 safari version"
 		]
 	},
-	"proxy": "http://newsbuzz-react-server.herokuapp.com"
+	"proxy": "https://newsbuzz-react-server.herokuapp.com"
 }

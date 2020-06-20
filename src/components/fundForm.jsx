@@ -8,7 +8,7 @@ import Form from './common/form';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-const apiEndpoint = 'http://newsbuzz-react-server.herokuapp.com/api/funds';
+const apiEndpoint = 'https://newsbuzz-react-server.herokuapp.com/api/funds';
 
 class FundForm extends Form {
 	state = {
@@ -51,7 +51,7 @@ class FundForm extends Form {
 		let user = auth.getCurrentUser();
 		if (user) {
 			const { data } = await axios.get(
-				'http://newsbuzz-react-server.herokuapp.com/api/users/' + user._id
+				'https://newsbuzz-react-server.herokuapp.com/api/users/' + user._id
 			);
 			user = data[0];
 			this.setState({ user });
@@ -76,7 +76,7 @@ class FundForm extends Form {
 		formData.append('file', this.state.file);
 
 		try {
-			const res = await axios.post('http://newsbuzz-react-server.herokuapp.com/upload', formData, {
+			const res = await axios.post('https://newsbuzz-react-server.herokuapp.com/upload', formData, {
 				headers: {
 					'Content-Type': 'multipart/form-data'
 				}

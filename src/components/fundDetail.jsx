@@ -6,7 +6,7 @@ import FundDetailProgress from '../../src/components/pages/fundDetailProgress';
 import StripeCheckout from 'react-stripe-checkout';
 import { ToastContainer, toast } from 'react-toastify';
 
-const apiEndpoint = 'http://newsbuzz-react-server.herokuapp.com/api/funds/';
+const apiEndpoint = 'https://newsbuzz-react-server.herokuapp.com/api/funds/';
 
 class FundDetail extends Component {
 	state = {
@@ -23,7 +23,7 @@ class FundDetail extends Component {
 		this.setState({ fund });
 
 		const { data } = await axios.get(
-			'http://newsbuzz-react-server.herokuapp.com/api/users/' + '/' + this.state.fund.userId
+			'https://newsbuzz-react-server.herokuapp.com/api/users/' + '/' + this.state.fund.userId
 		);
 		const user = data[0];
 		console.log(user);
@@ -38,7 +38,7 @@ class FundDetail extends Component {
 			);
 	};
 	async handleToken(token) {
-		const response = await axios.post('http://newsbuzz-react-server.herokuapp.com/api/pay/', {
+		const response = await axios.post('https://newsbuzz-react-server.herokuapp.com/api/pay/', {
 			token,
 			product: {
 				name: 'Fund',
@@ -52,7 +52,7 @@ class FundDetail extends Component {
 		if (status === 'success') {
 			toast('Success! Check email for details', { type: 'success' });
 			await axios.put(
-				'http://newsbuzz-react-server.herokuapp.com/api/funds/5e5975b0e3137d315c64418a',
+				'https://newsbuzz-react-server.herokuapp.com/api/funds/5e5975b0e3137d315c64418a',
 				{ raisedAmount: 154, donations: 1 }
 			);
 			window.location.reload();

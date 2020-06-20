@@ -4,7 +4,7 @@ import Moment from 'react-moment';
 import 'moment-timezone';
 import auth from '../services/authService';
 import axios from 'axios';
-const apiEndpoint = 'http://newsbuzz-react-server.herokuapp.com/api/issues';
+const apiEndpoint = 'https://newsbuzz-react-server.herokuapp.com/api/issues';
 
 class ForumIssue extends Component {
 	state = {
@@ -18,7 +18,7 @@ class ForumIssue extends Component {
 		let user = auth.getCurrentUser();
 		if (user) {
 			const { data } = await axios.get(
-				'http://newsbuzz-react-server.herokuapp.com/api/users/' + user._id
+				'https://newsbuzz-react-server.herokuapp.com/api/users/' + user._id
 			);
 			user = data[0];
 			this.setState({ user });

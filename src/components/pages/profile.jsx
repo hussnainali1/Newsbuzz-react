@@ -8,7 +8,7 @@ class Profile extends Component {
 
 	async componentDidMount() {
 		const { data } = await axios.get(
-			'http://newsbuzz-react-server.herokuapp.com/api/users/' + '/' + this.props.match.params.id
+			'https://newsbuzz-react-server.herokuapp.com/api/users/' + '/' + this.props.match.params.id
 		);
 		const user = data[0];
 		console.log(user);

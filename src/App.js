@@ -43,7 +43,7 @@ class App extends Component {
     let user = auth.getCurrentUser();
     if (user) {
       const { data } = await axios.get(
-        "http://newsbuzz-react-server.herokuapp.com/api/users/" + user._id
+        "https://newsbuzz-react-server.herokuapp.com/api/users/" + user._id
       );
       user = data[0];
     }

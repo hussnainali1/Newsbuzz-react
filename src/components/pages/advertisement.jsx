@@ -5,7 +5,7 @@ import AdCard from '../adCard';
 import { Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 
-const apiEndpoint = 'http://newsbuzz-react-server.herokuapp.com/api/ads';
+const apiEndpoint = 'https://newsbuzz-react-server.herokuapp.com/api/ads';
 
 class Advertisement extends Component {
 	state = {

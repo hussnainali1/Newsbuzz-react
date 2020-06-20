@@ -18,7 +18,7 @@ class Billing extends Component {
 		let user = auth.getCurrentUser();
 		if (user) {
 			const { data } = await axios.get(
-				'http://newsbuzz-react-server.herokuapp.com/api/users/' + user._id
+				'https://newsbuzz-react-server.herokuapp.com/api/users/' + user._id
 			);
 			user = data[0];
 			this.setState({ user });
@@ -30,7 +30,7 @@ class Billing extends Component {
 		}
 
 		const { data } = await axios.get(
-			'http://newsbuzz-react-server.herokuapp.com/api/bills/' + this.state.user._id
+			'https://newsbuzz-react-server.herokuapp.com/api/bills/' + this.state.user._id
 		);
 		const bill = data;
 		this.setState({ bill });
@@ -44,7 +44,7 @@ class Billing extends Component {
 		this.setState({ bill });
 	}
 	async handleToken(token) {
-		const response = await axios.post('http://newsbuzz-react-server.herokuapp.com/api/pay/', {
+		const response = await axios.post('https://newsbuzz-react-server.herokuapp.com/api/pay/', {
 			token,
 			product: {
 				name: 'Bill',
@@ -56,7 +56,7 @@ class Billing extends Component {
 		console.log('Response:', response.data);
 		if (status === 'success') {
 			await axios.put(
-				'http://newsbuzz-react-server.herokuapp.com/api/bills/5e4bfdb959f0034b4c9e4052',
+				'https://newsbuzz-react-server.herokuapp.com/api/bills/5e4bfdb959f0034b4c9e4052',
 				{ isPaid: true }
 			);
 			toast('Success! Check email for details', { type: 'success' });
