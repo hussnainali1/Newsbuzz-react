@@ -147,7 +147,7 @@ class ComplainDetail extends Component {
             <div className="col-md-8" style={{ marginTop: "7%" }}>
               <div className="event-desc disable-scrollbars">
                 {complain.description}
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus
+                {/* Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus
                 omnis amet quo mollitia eaque enim voluptatem alias, rerum
                 reiciendis et? Odio quo ipsam est! Error fuga provident quasi,
                 maiores ut deserunt facere vel libero. Voluptatibus voluptas sed
@@ -207,7 +207,7 @@ class ComplainDetail extends Component {
                 impedit eius esse dicta consequuntur labore? Nostrum, architecto
                 voluptatem velit repellendus temporibus recusandae aut aliquam
                 quam eius cum molestias libero facilis repellat, ea mollitia
-                ipsum. Vel quis a autem corporis, itaque eligendi!
+                ipsum. Vel quis a autem corporis, itaque eligendi! */}
               </div>
             </div>
           </div>
