@@ -86,7 +86,7 @@ class Complains extends Component {
                   <th scope="col">Complains</th>
                   {/* <th scope="col">Posted by</th> */}
                   <th scope="col">Status</th>
-<!--                   <th scope="col">Delete</th> -->
+                  {/* <!--                   <th scope="col">Delete</th> --> */}
                 </tr>
               </thead>
               <tbody>
@@ -100,14 +100,14 @@ class Complains extends Component {
                     </td>
                     {/* <td></td> */}
                     <td>{complain.status}</td>
-<!--                     <td>
+                    {/* <td>
                       <button
                         className="btn btn-danger"
                         onClick={() => this.handleDelete(complain)}
                       >
                         Delete
                       </button>
-                    </td> -->
+                    </td> */}
                   </tr>
                 ))}
               </tbody>
